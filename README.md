@@ -70,6 +70,7 @@ ng serve
 
 ``` 
 Autor
-Pedro Marinho, como e-mail ou redes sociais.
+Pedro Marinho.
 
 Licença
+[MIT](https://choosealicense.com/licenses/mit/)
