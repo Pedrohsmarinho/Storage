@@ -1,0 +1,29 @@
+<form (ngSubmit)="submit()" [formGroup]="productForm" #formDir="ngForm">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput type="text" placeholder="Name" formControlName="name" required />
+    <mat-error *ngIf="name.invalid && formDir.submitted">
+      <span *ngIf="name.errors?.['required']">This field name is required.</span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Price</mat-label>
+    <input matInput type="number" placeholder="Price" formControlName="price" required />
+    <mat-error *ngIf="price.invalid && formDir.submitted">
+      <span *ngIf="price.errors?.['required']">This field Price is required.</span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Expiration Date</mat-label>
+    <input matInput type="date" placeholder="Expiration Date" formControlName="expiration_date" required />
+    <mat-error *ngIf="expiration_date.invalid && formDir.submitted">
+      <span *ngIf="expiration_date.errors?.['required']">This field is required.</span>
+    </mat-error>
+  </mat-form-field>
+
+  <div class="form-group">
+    <button mat-raised-button color="green" type="submit">Submit</button>
+  </div>
+</form>

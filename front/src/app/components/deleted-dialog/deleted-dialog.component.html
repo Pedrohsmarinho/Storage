@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Confirmation</h2>
+<div mat-dialog-content>
+  <p>Are you sure you want to delete "{{ data.productName }}"?</p>
+  <form>
+    <mat-form-field >
+      <mat-label>Type the name of the product to confirm deletion:</mat-label>
+      <input matInput [(ngModel)]="inputValue" name="productName" required>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button color="warn" [disabled]="inputValue !== data.productName" (click)="onConfirmClick()">Confirm</button>
+</div>
